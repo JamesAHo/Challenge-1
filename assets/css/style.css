@@ -1,3 +1,10 @@
+/* noticed the main theme of this site is using white and blue color, creating CSS variable will minimized the extra repeats. */
+:root {
+    --white:#ffffff;
+    --blue: #2589bd;
+    --contentbackground: #0072bb;
+
+}
 * {
     box-sizing: border-box;
     padding: 0;
@@ -12,7 +19,7 @@ body {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .header h1 {
@@ -42,7 +49,7 @@ body {
 }
 
 a {
-    color: #ffffff;
+    color: var(--white);
     text-decoration: none;
 }
 
@@ -85,20 +92,20 @@ p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #2589bd;
 }
-
+/* substitute variables to all classes that need white color */
 .benefit-lead {
     margin-bottom: 32px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .benefit-brand {
     margin-bottom: 32px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .benefit-cost {
     margin-bottom: 32px;
-    color: #ffffff;
+    color: var(--white);
 }
 
 .benefit-lead h3 {
@@ -134,13 +141,13 @@ p {
     max-width: 150px;
 }
 
-.search-engine-optimization {
+.search-engine-optimization  {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+    background-color: var(--contentbackground);
+    color: var(--white);
 }
 
 .online-reputation-management {
@@ -148,8 +155,8 @@ p {
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+    background-color: var(--contentbackground);
+    color: var(--white);
 }
 
 .social-media-marketing {
@@ -157,9 +164,10 @@ p {
     padding: 50px;
     height: 300px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
+    background-color: var(--contentbackground);
+    color: var(--white);
 }
+
 
 .search-engine-optimization img {
     max-height: 200px;
@@ -197,4 +205,12 @@ p {
 
 .footer h2 {
     font-size: 20px;
+}
+/* add media query css to make site responsive */
+@media screen and (max-width: 768px){
+    body, .header, .benefits {
+        width: 75%;
+        flex-direction: column;
+        background-color: lightblue;
+    }
 }
