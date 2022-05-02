@@ -210,15 +210,4 @@ p {
     font-size: 20px;
 }
 /* add media query css to make site responsive */
-@media screen and (max-width: 768px){
-    .header .hero {
-        flex-direction:column;
-        padding-top: 20px;
-        text-align: center;
-        
-    }
-    .content {
-        display:block;
-        text-align: center;
-    }
-}
+
