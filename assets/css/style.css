@@ -211,9 +211,14 @@ p {
 }
 /* add media query css to make site responsive */
 @media screen and (max-width: 768px){
-    body {
-        width: 75%;
-        flex-direction: column;
+    .header .hero {
+        flex-direction:column;
+        padding-top: 20px;
+        text-align: center;
         
+    }
+    .content {
+        display:block;
+        text-align: center;
     }
 }
